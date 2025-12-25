@@ -4,6 +4,9 @@ title: "Writing"
 permalink: /writing/
 ---
 
-Notes, paper summaries, and thoughts on LC–MS, proteomics, metabolomics, and workflow building.
+Notes, paper summaries, and thoughts.
 
-You can browse the posts below.
+{% for post in site.posts %}
+- **[{{ post.title }}]({{ post.url | relative_url }})**  
+  <small>{{ post.date | date: "%Y-%m-%d" }}{% if post.tags %} · {{ post.tags | join: ", " }}{% endif %}</small>
+{% endfor %}
