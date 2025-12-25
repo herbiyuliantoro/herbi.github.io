@@ -8,13 +8,13 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # the available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Herbi Yuliantoro"
 name                     : &name "Herbi Yuliantoro"
 description              : &description "PhD in Chemistry — LC–MS, Proteomics, Metabolomics. Tutorials, training materials, and project notes."
 url                      : "https://herbiyuliantoro.github.io"
-baseurl                  : ""
+baseurl                  : "/herbi.github.io"
 repository               : "herbiyuliantoro/herbi.github.io"
+
 
 
 # Site Author - The following control what appear as part of the author content on the side bar.
