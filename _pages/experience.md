@@ -4,6 +4,9 @@ title: "Experience"
 permalink: /experience/
 ---
 
-Selected research and technical projects I’ve worked on.
+Selected projects, research work, and things I’ve built.
 
-This section includes method development, analysis workflows, and tools I’ve built.
+{% assign items = site.portfolio | sort: "date" | reverse %}
+{% for item in items %}
+- **[{{ item.title }}]({{ item.url | relative_url }})**
+{% endfor %}
