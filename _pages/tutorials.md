@@ -4,8 +4,9 @@ title: "Tutorials"
 permalink: /tutorials/
 ---
 
-Step-by-step guides and practical workflows.
+Step-by-step guides and workflows.
 
-- LC–MS checklists
-- Data processing
-- Reproducible analysis tips
+{% assign items = site.tutorials | sort: "date" | reverse %}
+{% for item in items %}
+- **[{{ item.title }}]({{ item.url | relative_url }})**
+{% endfor %}
