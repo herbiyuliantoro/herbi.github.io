@@ -188,18 +188,27 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
     output: true
-    permalink: /:collection/:path/
+    permalink: /publications/:path/
   portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /experience/:path/
+  tutorials:
+    output: true
+    permalink: /tutorials/:path/
+  media:
+    output: true
+    permalink: /media/:path/
+
+  # optional: keep these if you still want them later
+  teaching:
+    output: true
+    permalink: /teaching/:path/
   talks:
     output: true
-    permalink: /:collection/:path/
+    permalink: /talks/:path/
+
 
 
 # These settings control how pages and collections are included in the site
@@ -248,13 +257,30 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comments: true
   # _talks
   - scope:
       path: ""
       type: talks
     values:
       layout: talk
+      author_profile: true
+      share: true
+  # _tutorials
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+  # _media
+  - scope:
+      path: ""
+      type: media
+    values:
+      layout: single
       author_profile: true
       share: true
 
