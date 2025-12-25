@@ -4,8 +4,9 @@ title: "Media"
 permalink: /media/
 ---
 
-Slides, posters, recordings, and images.
+Slides, posters, videos, and images.
 
-- Talks and workshops
-- Downloadable PDFs/PPTs
-- Photo and poster gallery
+{% assign items = site.media | sort: "date" | reverse %}
+{% for item in items %}
+- **[{{ item.title }}]({{ item.url | relative_url }})**
+{% endfor %}
